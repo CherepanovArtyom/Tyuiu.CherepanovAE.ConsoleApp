@@ -9,7 +9,6 @@ namespace Tyuiu.CherepanovAE.ConsoleApp.Lab6.V2.Lib
     public class DataService
     {
         public double[] GetMassFunction(int startValue, int stopValue)
-
         {
             double[] valueArray;
             int len = (stopValue - startValue) + 1;
@@ -18,22 +17,16 @@ namespace Tyuiu.CherepanovAE.ConsoleApp.Lab6.V2.Lib
             int count = 0;
             for (int x = startValue; x <= stopValue; x++)
             {
-                if ((Math.Pow(x, 3) - 15 * x) != 0)
+                y = Math.Round(Math.Pow(2, -x) + ((5 * Math.Pow(x, 2)) / (3 * Math.Pow(x, 3))) - Math.Cos(Math.Pow(x, 2)) + Math.Sin(2 * x));
+                valueArray[count] = y;
+                if (x == 0)
                 {
-                    y = Math.Pow(2, -x) + ((5 * Math.Pow(x, 2)) / (3 * Math.Pow(x, 3))) - Math.Cos(Math.Pow(x, 2)) + Math.Sin(2 * x);
-
-                    valueArray[count] = y;
-                    count++;
+                    valueArray[count] = 0;
                 }
-                else
-                {
-
-                    count++;
-                }
-
+                count++;
             }
-            return valueArray;
 
+            return valueArray;
         }
     }
 }
