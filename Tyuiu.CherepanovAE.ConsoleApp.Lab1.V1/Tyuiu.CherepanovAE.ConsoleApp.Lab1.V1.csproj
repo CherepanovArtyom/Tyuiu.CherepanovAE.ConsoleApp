@@ -49,5 +49,11 @@
   <ItemGroup>
     <None Include="App.config" />
   </ItemGroup>
+  <ItemGroup>
+    <ProjectReference Include="..\Tyuiu.CherepanovAE.ConsoleApp.Lab1.V1.Lib\Tyuiu.CherepanovAE.ConsoleApp.Lab1.V1.Lib.csproj">
+      <Project>{480939a3-c9d4-4dea-b25e-c6351cf86166}</Project>
+      <Name>Tyuiu.CherepanovAE.ConsoleApp.Lab1.V1.Lib</Name>
+    </ProjectReference>
+  </ItemGroup>
   <Import Project="$(MSBuildToolsPath)\Microsoft.CSharp.targets" />
 </Project>
